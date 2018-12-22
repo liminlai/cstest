@@ -1,0 +1,145 @@
+$light-grey: #eee;
+$item-height-default: 100px;
+$solid-border: 2px solid #666;
+
+body{
+    padding: 0;
+    margin:0;
+    color: #333;
+}
+a,
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    position: relative;
+    padding:20px 15px;
+}
+
+.row{
+    margin-right: -5px;
+    margin-left: -5px;
+}
+[class*="col"]{
+    padding-right: 5px;
+    padding-left: 5px;
+} 
+.section__item{
+    background: $light-grey; 
+    margin: 5px 0;
+    padding: 5px;
+}
+.section__toggle{
+    display:none;
+    position: absolute;
+    top: 0; 
+    z-index: 100;
+    cursor: pointer;
+} 
+.section__itemRight{
+    width: $item-height-default;
+    float: right;
+} 
+
+.menu { 
+    display: none;
+} 
+.menu.on  {
+    display: block;
+}
+.menu ul{
+    padding: 0;
+    margin: 0;
+}
+.menu ul li {
+    list-style-type: none;
+    background:$light-grey;  
+    margin:5px 0;
+} 
+.menu ul li a {
+    display:block;
+    padding: 5px;
+} 
+
+.section3 .section__item{
+    height: 230px;
+    width: 100%;
+}
+.section4 .section__item{
+    height: $item-height-default; 
+}
+.section5 .section__item{
+    height: $item-height-default;
+}
+.section__item--center{ 
+    width: $item-height-default;
+    margin: 5px auto;
+    padding: 5px;
+    text-align: center;
+    background: $light-grey;
+} 
+
+.section1,
+.section2,
+.section3,
+.section4,
+.section5,
+.section6,
+.section7{
+    border: $solid-border;
+    border-bottom: none;
+    border-right: none;
+}
+
+.section1,
+.section3,
+.section4,
+.section6,
+.section7{  
+    border-right: $solid-border;
+}
+.section2,  
+.section7{  
+    border-bottom: $solid-border;
+}
+
+@media only screen and (max-width : 768px){
+
+    .section__toggle{
+        display: block; 
+    }
+    .section__logo{
+        width: 100px; 
+        display:inline-block;
+        display: flex;
+        justify-content: center;
+        margin: 5px auto;
+    }
+    .section__itemRight{
+        width: 100%;
+        float: none;
+        display:inline-block;
+        display: flex;
+        justify-content: center;
+    }  
+    .menu{
+        position: absolute;
+        z-index: 1;
+        width: 200px;
+        top: 61px;
+        background: white;
+    }
+    .section5 .section__item,
+    .section6 .section__item{
+        height: 90px;
+    }
+    .section6 .section__item--last{
+        height:150px;
+    } 
+    .section2,  
+    .section5{  
+        border-right: $solid-border;
+    }
+} 
