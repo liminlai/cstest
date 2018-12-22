@@ -106,7 +106,6 @@ a:hover{
 }
 
 @media only screen and (max-width : 768px){
-
     .section__toggle{
         display: block; 
     }
@@ -137,9 +136,9 @@ a:hover{
     }
     .section6 .section__item--last{
         height:150px;
-    } 
+    }
     .section2,  
-    .section5{  
+    .section5{ 
         border-right: $solid-border;
     }
 } 

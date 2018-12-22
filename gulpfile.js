@@ -25,10 +25,11 @@ gulp.task('watch', function(done){
     done(); 
 });
 
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function(done) {
   browserSync.init({
     server: {
       baseDir: 'src'
     },
-  })
-}) 
+  });
+  done(); 
+});
